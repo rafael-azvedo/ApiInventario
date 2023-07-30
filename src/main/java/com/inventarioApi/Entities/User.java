@@ -7,11 +7,11 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-public class Account {
+public class User {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "account_id")
+    @Column(name = "User_id")
 	private Long Id;
 	
 	@Column(unique=true)
@@ -24,10 +24,10 @@ public class Account {
 	
 	private String thumbPath;
 
-	public Account() {
+	public User() {
 	}
 
-	public Account(Long id, String login, String password, String email, String thumbPath) {
+	public User(Long id, String login, String password, String email, String thumbPath) {
 		Id = id;
 		this.login = login;
 		this.password = password;
@@ -73,13 +73,5 @@ public class Account {
 
 	public void setThumbPath(String thumbPath) {
 		this.thumbPath = thumbPath;
-	}
-	
-	
-
-	
-	
-	
-	
-	
+	}	
 }
